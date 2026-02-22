@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume — [Your Name]</title>
+  <style>
+    :root{
+      --accent:#0f6cff;
+      --muted:#6b7280;
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --maxw:900px;
+      --radius:12px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background:linear-gradient(180deg,var(--bg),#ffffff 60%);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+      color:#111827;
+      -webkit-font-smoothing:antialiased;
+    }
+    .resume{
+      width:100%;
+      max-width:var(--maxw);
+      background:var(--card);
+      border-radius:var(--radius);
+      box-shadow:0 8px 30px rgba(15,23,42,0.08);
+      padding:28px;
+      display:grid;
+      grid-template-columns: 1fr 320px;
+      gap:24px;
+    }
+
+    /* Header */
+    .header{
+      grid-column:1 / -1;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      border-bottom:1px solid #eef2f7;
+      padding-bottom:18px;
+      margin-bottom:6px;
+    }
+    .name{
+      font-size:22px;
+      font-weight:700;
+      letter-spacing:-0.2px;
+    }
+    .subtitle{ color:var(--muted); font-size:14px; margin-top:6px; }
+
+    /* Left column */
+    .main{
+      padding-right:6px;
+    }
+    h2{
+      font-size:14px;
+      margin:0 0 10px 0;
+      color:#0b1220;
+      text-transform:uppercase;
+      letter-spacing:1px;
+    }
+    .section{ margin-bottom:18px; }
+    .edu-item, .proj-item, .skill-list, .ach-list {
+      background:transparent;
+      margin-bottom:10px;
+    }
+    .edu-title{ font-weight:600; }
+    .muted{ color:var(--muted); font-size:13px; }
+
+    .project-desc{ font-size:14px; margin:6px 0 0 0; color:#1f2937; }
+
+    /* Right column (sidebar) */
+    .side{
+      background:linear-gradient(180deg,#ffffff, #fbfdff);
+      border-radius:10px;
+      padding:16px;
+      height:fit-content;
+      box-shadow:0 4px 16px rgba(2,6,23,0.03);
+    }
+    .contact-row{ font-size:14px; margin-bottom:8px; display:flex; gap:8px; align-items:center; }
+    .pill{ display:inline-block; padding:6px 8px; border-radius:999px; background:#f1f5ff; color:var(--accent); font-weight:600; font-size:12px; }
+
+    .skills { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+    .skill{ background:#f3f4f6; padding:6px 8px; border-radius:6px; font-size:13px; color:#111827; }
+
+    /* footer / small print */
+    .small{ font-size:12px; color:var(--muted); margin-top:12px; }
+
+    /* Responsive */
+    @media (max-width:880px){
+      .resume{ grid-template-columns: 1fr; padding:20px; }
+      .header{ flex-direction:column; align-items:flex-start; gap:8px; }
+    }
+  </style>
+</head>
+<body>
+  <article class="resume" role="document" aria-label="Resume of [Your Name]">
+    <header class="header">
+      <div>
+        <div class="name">[Gaurav Yadav]</div>
+        <div class="subtitle">B.Tech — [CSE] · 2nd Year · [ABES Engineering College]</div>
+      </div>
+      <div style="text-align:right">
+        <div style="font-weight:600">Career Objective</div>
+        <div class="muted" style="max-width:360px;">
+           B.Tech 2nd-year student seeking internships or project opportunities to apply programming and engineering fundamentals, learn new technologies, and contribute to real-world projects.
+        </div>
+      </div>
+    </header>
+
+    <!-- Left / main column -->
+    <section class="main">
+      <div class="section">
+        <h2>Education</h2>
+        <div class="edu-item">
+          <div class="edu-title">Bachelor of Technology (B.Tech) — [CSE]</div>
+         <!-- <div class="muted">[ABES Enginnering College], [Ghaiabad] • 2024 — Present (2nd Year)</div>-->
+        </div>
+        <div class="edu-item">
+          <div class="edu-title">Class XII (12th)</div>
+          <div class="muted"> [UP Board] • Year: [2023]</div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-title">Class X (10th)</div>
+          <div class="muted"> [UP Board] • Year: [2021]</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Projects / Academic Work</h2>
+
+        <div class="proj-item">
+          <div style="font-weight:600">[Project Title] <span class="muted"> — [Duration]</span></div>
+          <div class="project-desc">Short description: what you built, your role, technologies used (e.g., C/C++, Python, HTML/CSS, Arduino), and the outcome or learning.</div>
+        </div>
+
+        <div class="proj-item">
+          <div style="font-weight:600">[Mini Project Title]</div>
+          <div class="project-desc">Brief description — tools/languages used and any notable result (e.g., demo link, grade, or impact).</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Achievements & Certifications</h2>
+        <ul class="ach-list">
+          <li>e.g., 1st Prize — College Coding Hackathon, [Year]</li>
+          <li>Certificate: [Course name] — [Platform] (e.g., Intro to Python, Coursera)</li>
+          <li>Participated: [Workshop name], [Year]</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h2>Strengths & Extracurriculars</h2>
+        <ul>
+          <li>Quick learner, problem-solving, teamwork</li>
+          <li>Member — [College Club / Coding Society / Robotics Club]</li>
+          <li>Volunteering / Sports / Events participation</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Right / sidebar -->
+    <aside class="side">
+      <div style="margin-bottom:10px;">
+        <div class="pill">Contact</div>
+      </div>
+
+      <div class="contact-row">
+        <strong>Email:</strong>
+        <span class="muted">[yourname@email.com]</span>
+      </div>
+      <div class="contact-row">
+        <strong>Phone:</strong>
+        <span class="muted">+91-[XXXXXXXXXX]</span>
+      </div>
+      <div class="contact-row">
+        <strong>LinkedIn:</strong>
+        <span class="muted">[linkedin.com/in/yourname]</span>
+      </div>
+      <div class="contact-row">
+        <strong>GitHub:</strong>
+        <span class="muted">[github.com/yourname]</span>
+      </div>
+
+      <div style="margin-top:12px;">
+        <h3 style="margin:0 0 8px 0; font-size:13px; color:#0b1220;">Technical Skills</h3>
+        <div class="skills">
+          <span class="skill">C</span>
+          <span class="skill">C++</span>
+          <span class="skill">Python</span>
+          <span class="skill">HTML</span>
+          <span class="skill">CSS</span>
+          <span class="skill">DSA (Basics)</span>
+          <span class="skill">Git</span>
+        </div>
+      </div>
+
+      <div style="margin-top:12px;">
+        <h3 style="margin:0 0 8px 0; font-size:13px; color:#0b1220;">Languages</h3>
+        <div class="muted">English • Hindi • [Other]</div>
+      </div>
+
+      <div style="margin-top:12px;">
+        <h3 style="margin:0 0 8px 0; font-size:13px; color:#0b1220;">Personal Details</h3>
+        <div class="muted">DOB: [DD/MM/YYYY]</div>
+        <div class="muted">Address: [City, State]</div>
+      </div>
+
+      <div class="small">
+        References available on request.
+      </div>
+    </aside>
+  </article>
+</body>
+</html>
